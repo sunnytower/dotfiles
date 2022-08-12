@@ -1,0 +1,9 @@
+[user]
+	name = sunnytower
+	email = ljxreal1@gmail.com
+[alias]
+    c = commit
+    st = status
+[core]
+	excludesfile = ~/.gitignore
+    untrackedCache = true

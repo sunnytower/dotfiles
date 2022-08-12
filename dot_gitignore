@@ -1,0 +1,4 @@
+*.pyc
+.DS_Store
+Desktop.ini
+.Trashes
