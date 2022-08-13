@@ -1,13 +1,26 @@
 #!/usr/bin/env bash
+source ~/.aliases
 case "$(uname -s)" in
 
     Darwin)
+
+    # Ask for the administrator password upfront
     sudo -v
-    echo $SHELL
+
+    # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+    #press and hold will repeat keys.
+    defaults write -g ApplePressAndHoldEnabled -bool false
+    
+    sudo spctl --master-disable
+    
+
     ;;
     Linux)
-    echo "this is Linux test"
-    echo $SHELL
+    sudo root
+    update
+
     ;;
 
 
