@@ -3,17 +3,22 @@ alias g="git"
 alias vps="ssh vps"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-
+alias python="python3"
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
 
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup'
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages.
+alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup"
 
-# IP addresses
+# IP addresses.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 alias chez="chezmoi"
+alias chezad="chez add"
+alias chezap="chez -v apply"
+alias cheze="chez edit"
+

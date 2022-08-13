@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+case "$(uname -s)" in
+
+    Darwin)
+    sudo -v
+    echo $SHELL
+    ;;
+    Linux)
+    echo "this is Linux test"
+    echo $SHELL
+    ;;
+
+
+
+
+
+
+esac
