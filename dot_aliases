@@ -1,6 +1,5 @@
 # shortucuts
 alias g="git"
-alias vps="ssh vps"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias python="python3"
@@ -8,6 +7,7 @@ alias python="python3"
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep="grep --color=auto"
 
+alias vps="ssh vps"
 
 # OS dependent aliases
 case "$(uname -s)" in
@@ -19,15 +19,15 @@ case "$(uname -s)" in
 
     Linux)
     alias update="sudo apt update;sudo apt upgrade"
+    alias apt="sudo apt"
     ;;
 esac
 
 # IP addresses.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
-alias chez="chezmoi"
-alias chezad="chez add"
-alias chezap="chez -v apply"
-alias cheze="chez edit"
+alias che="chezmoi"
+alias chead="che add"
+alias cheap="che -v apply"
+alias chee="che edit"
 
