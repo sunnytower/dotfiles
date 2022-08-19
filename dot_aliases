@@ -2,7 +2,7 @@
 alias g="git"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias python="python3"
+
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep="grep --color=auto"
@@ -15,6 +15,8 @@ case "$(uname -s)" in
     Darwin)
         # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages.
     alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup"
+    alias pip="pip3"
+    alias python="python3"
     ;;
 
     Linux)
