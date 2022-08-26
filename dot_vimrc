@@ -70,9 +70,11 @@ vnoremap <S-Tab> <
 " share clipboard
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set clipboard^=unnamed,unnamedplus
+
 "stop highlight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <C-h> :nohlsearch<cr>
+
 "my config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap jk <Esc>
+"inoremap jk <Esc>
