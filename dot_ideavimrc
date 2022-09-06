@@ -1,6 +1,11 @@
 "" Source your .vimrc
 source ~/.vimrc
 let mapleader = "/<space>"
+map <leader>f V<Action>(ReformatCode)
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>r <Action>(RenameElement)
+map <leader>z <Action>(ToggleDistractionFreeMode)
 
 " 在normal模式下保持英文输入法，插入模式下回复插入模式时的输入法（IdeaVimExtension）
 Set keep-english-in-normal-and-restore-in-insert
@@ -16,7 +21,6 @@ set keep-english-in-normal
 
 " Don't use Ex mode, use Q for formatting.
 "map Q gq
-
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
