@@ -6,6 +6,6 @@
     st = status
     graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
 [core]
-    editor = vim
+    editor = lvim
 	excludesfile = ~/.gitignore
     untrackedCache = true

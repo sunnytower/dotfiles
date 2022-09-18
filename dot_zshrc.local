@@ -4,6 +4,8 @@ case "$(uname -s)" in
         # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages.
     export PATH="/opt/homebrew/sbin:$PATH"
     export PATH="/opt/homebrew/bin:$PATH"
+    export PATH=/Users/jesse/.local/bin:$PATH
+    export EDITOR="lvim"
     ;;
 
     Linux)

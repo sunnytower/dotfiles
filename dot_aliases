@@ -17,6 +17,7 @@ case "$(uname -s)" in
     alias update="brew update; brew upgrade; brew cleanup"
     alias pip="pip3"
     alias python="python3"
+    alias vim="lvim"
     ;;
 
     Linux)
