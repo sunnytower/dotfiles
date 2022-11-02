@@ -1,11 +1,12 @@
 case "$(uname -s)" in
 
     Darwin)
-        # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages.
     export PATH="/opt/homebrew/sbin:$PATH"
     export PATH="/opt/homebrew/bin:$PATH"
     #for lunarvim
     export PATH=/Users/jesse/.local/bin:$PATH
+
+    export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
     ;;
 
     Linux)
@@ -16,6 +17,6 @@ esac
 export EDITOR="lvim"
 # tmux session
 ide() {
-   ./.tmux_sessions
+   ~/.tmux_sessions
 }
 

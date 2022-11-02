@@ -1,20 +1,10 @@
-"" Source your .vimrc
-source ~/.vimrc
-let mapleader = "/<space>"
-map <leader>f V<Action>(ReformatCode)
-map <leader>s <Action>(SelectInProjectView)
-map <leader>a <Action>(Annotate)
-map <leader>r <Action>(RenameElement)
-map <leader>z <Action>(ToggleDistractionFreeMode)
-
 " 在normal模式下保持英文输入法，插入模式下回复插入模式时的输入法（IdeaVimExtension）
 Set keep-english-in-normal-and-restore-in-insert
 set keep-english-in-normal
-
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
-"set scrolloff=5
+"snnoremap <Leader>gt :action GotoTest<CR>nnoremap <Leader>gt :action GotoTest<CR>et scrolloff=5
 
 " Do incremental searching.
 "set incsearch
@@ -31,6 +21,111 @@ set keep-english-in-normal
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
-
-
 " Find more examples here: https://jb.gg/share-ideavimrc
+
+" 显示当前模式
+set showmode
+" 共享系统粘贴板
+set clipborad=unamed
+" 打开行号
+set number
+" 打开相对行号
+set relativenumber
+" 设置命令历史记录条数
+set history=2000
+" 关闭兼容vi
+set nocompatible
+" 开启语法高亮功能
+syntax enable
+" 允许用指定语法高亮配色方案替换默认方案
+syntax on
+" 模式搜索实时预览,增量搜索
+set incsearch
+" 设置搜索高亮
+set hlsearch
+" 忽略大小写 (该命令配合smartcase使用较好，否则不要开启)
+set ignorecase
+" 模式查找时智能忽略大小写
+set smartcase
+" vim自身命令行模式智能补全
+set wildmenu
+" 总是显示状态栏
+set laststatus=2
+" 显示光标当前位置
+set ruler
+" 高亮显示当前行/列
+set cursorline
+"set cursorcolumn
+" 禁止折行
+set nowrap
+" 将制表符扩展为空格
+set expandtab
+" 设置编辑时制表符占用空格数
+set tabstop=4
+" 设置格式化时制表符占用空格数
+set shiftwidth=4
+" 让 vim 把连续数量的空格视为一个制表符
+set softtabstop=4
+" 基于缩进或语法进行代码折叠
+set foldmethod=indent
+set foldmethod=syntax
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+
+" 设置前导键
+let mapleader=" "
+" 暂时取消搜索高亮快捷键
+nnoremap <silent> <Leader>h :<C-u>nohlsearch<CR><C-l>
+
+" 移动相关
+" 定义快捷键到行首和行尾
+map H ^
+map L $
+
+" 文件操作相关
+" 定义快捷键关闭当前分割窗口
+"nnoremap fq :q<CR>
+" 定义快捷键保存当前窗口内容
+"nnoremap fw :w<CR>
+
+" 窗口操作相关
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" 使用idea内部功能
+" 复制
+nnoremap ;y :action $Copy<CR>
+" 粘贴
+nnoremap ;p :action $Paste<CR>
+" 剪切
+nnoremap ;x :action $Cut<CR>
+" 全选
+nnoremap ;a :action $SelectAll<CR>
+" 格式化代码
+nnoremap <Leader>lf :action ReformatCode<CR>
+" 新建文件
+nnoremap <Leader>n :action NewFile<CR>
+" 在文件中查找
+nnoremap <Leader>fd :action FindInPath<CR>
+" 找到usage
+nnoremap <Leader>u :action FindUsages<CR>
+" 调用idea的replace操作
+nnoremap <Leader>; :action Replace<CR>
+" go to class
+nnoremap <Leader>gc :action GotoClass<CR>
+" go to action
+nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap <Leader>gt :action GotoTest<CR>
+" run
+nnoremap <Leader>r :action RunClass<CR>
+" 显示当前文件的文件路径
+nnoremap <Leader>fp :action ShowFilePath<CR>
+" 隐藏激活窗口
+nnoremap <Leader>h :action HideActiveWindow<CR>
+
+
