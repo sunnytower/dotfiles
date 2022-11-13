@@ -2,10 +2,10 @@
 	name = sunnytower
 	email = ljxreal1@gmail.com
 [alias]
-    c = commit
-    st = status
-    graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
+  c = commit
+  st = status
+  graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
 [core]
-    editor = lvim
+  editor = lvim
 	excludesfile = ~/.gitignore
-    untrackedCache = true
+  untrackedCache = true
