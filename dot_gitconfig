@@ -5,6 +5,13 @@
     c = commit
     st = status
     graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
+    lol = log --graph --oneline --decorate --color --all
 [core]
     excludesfile = ~/.gitignore
     untrackedCache = true
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	grep = auto
